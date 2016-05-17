@@ -1,5 +1,13 @@
+<% i = 1 %>
 <% for order in @orders %>
- <p>Customer: </p><p><%=order.pretty_name%></p>
- <p>Size: </p><p><%=order.size%></p>
- <p>Quantity: </p><p><%=order.quantity%></p>
+<% if i%2 == 0 %>
+ <p class = "one">Customer: </p><p class = "two"><%=order.pretty_name%></p>
+ <p class = "one">Size: </p><p class = "two"><%=order.size%></p>
+ <p class = "one">Quantity: </p><p class = "two"><%=order.quantity%></p>
+ <% else %>
+ <p class = "three">Customer: </p><p class = "four"><%=order.pretty_name%></p>
+ <p class = "three">Size: </p><p class = "four"><%=order.size%></p>
+ <p class = "three">Quantity: </p><p class = "four"><%=order.quantity%></p>
+ <%end%>
+ <% i += 1 %>
  <%end%>
